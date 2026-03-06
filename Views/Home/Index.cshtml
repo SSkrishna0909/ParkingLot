@@ -1,0 +1,26 @@
+@model AreaBViewModel
+
+<div class="main-container">
+    <div class="area-a">
+        <div class="area-label">Area A</div>
+        <div class="controls">
+            <div class="form-group">
+                <label for="tagNumber">Tag number:</label>
+                <input type="text" id="tagNumber" placeholder="Value" />
+            </div>
+            <div id="message-box" class="message-box" style="display:none;"></div>
+            <div class="button-row">
+                <button id="btn-in" class="btn">In</button>
+                <button id="btn-out" class="btn">Out</button>
+            </div>
+            <button id="btn-stats" class="btn btn-stats">Stats</button>
+        </div>
+    </div>
+
+    <div class="area-b">
+        <div class="area-label">Area B</div>
+        <div id="area-b-content">
+            @await Html.PartialAsync("_AreaB", Model)
+        </div>
+    </div>
+</div>

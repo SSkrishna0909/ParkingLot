@@ -1,0 +1,33 @@
+@model AreaBViewModel
+
+<p>Total spots: @Model.TotalSpots</p>
+<p>Hourly Fee: $@Model.HourlyFee</p>
+<p>Available spots: @Model.AvailableSpots</p>
+
+@if (Model.ParkedCars.Any())
+{
+    <table class="parking-table">
+        <thead>
+            <tr>
+                <th>Tag Number</th>
+                <th>In</th>
+                <th>Elapsed time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var car in Model.ParkedCars)
+            {
+                <tr>
+                    <td>@car.TagNumber</td>
+                    <td>@car.CheckIn</td>
+                    <td>@car.ElapsedTime</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>Spots taken: @Model.SpotsTaken</p>
+}
+else
+{
+    <p>No cars currently parked.</p>
+}

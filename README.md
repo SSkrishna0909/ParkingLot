@@ -1,7 +1,18 @@
 # Parking Lot Management
 
-A web application to manage a parking lot, built with ASP.NET Core MVC (.NET 8), plain JavaScript, and SQL Server.
+![Application](Images/App-running.jpg)
 
+A web application to manage a parking lot, built with ASP.NET Core MVC (.NET 8), plain JavaScript, and SQLite.
+
+The application allows vehicles to check in and check out, calculates parking charges, tracks parking statistics, and stores records in a SQLite database.
+
+## Tech Stack
+
+- ASP.NET Core MVC (.NET 8)
+- SQLite Database
+- C#
+- JavaScript (AJAX)
+- HTML / CSS
 
 ## Setup
 
@@ -45,6 +56,45 @@ The SQLite database file path can also be changed here (default: `parking.db` in
 - **Live Snapshot (Area B)**: Updates via AJAX on every check-in/check-out without a full page reload
 - **Stats Modal**: Click "Stats" to view available spots, today's revenue, and 30-day averages
 - **Validation**: Errors are shown inline for duplicate check-ins, full lot, or unknown tag numbers
+
+## Application Output
+
+### Application Running
+![App](Images/App-running.jpg)
+
+### Car Check-In
+![Check In](Images/checkin.jpg)
+
+### Car Check-Out
+![Check Out](Images/checkout.jpg)
+
+### Stats Window
+![Stats](Images/stats.jpg)
+
+### Duplicate Check-In Validation
+![Duplicate Checkin](Images/validation-duplicate-checkin.jpg)
+
+### Empty Tag Validation
+![Empty Tag](Images/validation-empty-tag.jpg)
+
+### Invalid Checkout Validation
+![Invalid Checkout](Images/validation-invalid-checkout.jpg)
+
+## Database Verification
+
+- The SQLite database `parking.db` stores all parking records.
+
+- Commands used to verify the database:
+
+```bash
+sqlite3 parking.db
+.tables
+.mode column
+.headers on
+SELECT * FROM ParkingRecords;
+```
+
+- ![Database Records](Images/database.jpg)
 
 ## Billing Rules
 

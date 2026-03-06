@@ -2,10 +2,6 @@
 
 A web application to manage a parking lot, built with ASP.NET Core MVC (.NET 8), plain JavaScript, and SQL Server.
 
-## Requirements
-
-- [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8)
-- No database server needed — SQLite is embedded and the `parking.db` file is created automatically on first run.
 
 ## Setup
 
@@ -56,30 +52,3 @@ The SQLite database file path can also be changed here (default: `parking.db` in
 - Each partial hour beyond the first is rounded up (ceiling)
 - Example: 61 minutes = 2 hours = $30 at $15/hr
 
-## Project Structure
-
-```
-ParkingLot/
-├── Controllers/
-│   └── HomeController.cs
-├── Models/
-│   └── ParkingModels.cs
-├── Services/
-│   ├── IParkingService.cs
-│   └── ParkingService.cs
-├── Views/
-│   ├── Home/
-│   │   ├── Index.cshtml
-│   │   └── _AreaB.cshtml
-│   ├── Shared/
-│   │   └── _Layout.cshtml
-│   ├── _ViewImports.cshtml
-│   └── _ViewStart.cshtml
-├── wwwroot/
-│   ├── css/site.css
-│   └── js/site.js
-├── appsettings.json
-├── database.sql
-├── Program.cs
-└── ParkingLot.csproj
-```

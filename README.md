@@ -16,16 +16,32 @@ The application allows vehicles to check in and check out, calculates parking ch
 
 ## Setup
 
-### 1. Clone the Repository
+### 1. Prerequisites
+Make sure the following are installed:
+
+- .NET SDK
+- Git
+- Visual Studio Code (optional)
+
+### 2. Clone the Repository
 
 Open a terminal or command prompt and run:
 
 ```bash
 git clone https://github.com/SSkrishna0909/ParkingLot.git
+```
+### 3. Navigate to the project folder
+
+```bash
 cd ParkingLot
 ```
+### 4. Open the project in Visual Studio Code (optional)
 
-### 2. Run the Application
+```bash
+code .
+```
+
+### 4. Run the Application
 
 ```bash
 dotnet run
@@ -39,7 +55,7 @@ Then open your browser and navigate to:
 http://localhost:5000
 ```
 
-### 3. Parking Configuration
+### 5. Parking Configuration
 
 In `appsettings.json`, adjust the parking settings as needed:
 

@@ -41,7 +41,7 @@ cd ParkingLot
 code .
 ```
 
-### 4. Run the Application
+### 5. Run the Application
 
 ```bash
 dotnet run
@@ -55,7 +55,7 @@ Then open your browser and navigate to:
 http://localhost:5000
 ```
 
-### 5. Parking Configuration
+### 6. Parking Configuration
 
 In `appsettings.json`, adjust the parking settings as needed:
 
